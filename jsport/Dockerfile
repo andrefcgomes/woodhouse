@@ -1,5 +1,6 @@
 FROM alpine
 RUN apk add --update nodejs npm
+RUN npm install pm2 -g
 # Create app directory
 WORKDIR /usr/src/app
 
@@ -16,4 +17,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 9000
-CMD [ "node", "index.js" ]
+CMD ["pm2-runtime", "index.js"]
