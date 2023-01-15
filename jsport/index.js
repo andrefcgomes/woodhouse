@@ -106,6 +106,8 @@ const speechCommands = {
     },
   },
 };
+
+
 client.on("speech", (msg) => {
   const [command, args] = utils.extractCommandAndArgsFromAudio(msg);
   if (command in speechCommands) {
@@ -118,7 +120,7 @@ client.on("ready", () => {
   client.user.setPresence({
     activity: {
       name: "a tua cota de 4",
-      type: "WATCHING",
+      type: "STREAMING",
       url: "https://apav.pt",
     },
     status: "dnd",
