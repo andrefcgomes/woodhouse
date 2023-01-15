@@ -8,13 +8,13 @@ services:
       dockerfile: ./Dockerfile
     image: woodhouse-bot
     restart: unless-stopped
-  woodhouse-web:
-    volumes: 
-      - ./web:/web
-      - ./common:/common
-    build:
-      context: .
-      dockerfile: ./web/Dockerfile
-    image: woodhouse-web
-    ports:
-      - 5000:5000
+  # woodhouse-web:
+  #   volumes: 
+  #     - ./web:/web
+  #     - ./common:/common
+  #   build:
+  #     context: .
+  #     dockerfile: ./web/Dockerfile
+  #   image: woodhouse-web
+  #   ports:
+  #     - 5000:5000
