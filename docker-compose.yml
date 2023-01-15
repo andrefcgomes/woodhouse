@@ -1,0 +1,20 @@
+version: '2'
+services:
+  woodhouse-bot:
+    volumes: 
+    - ./common:/common
+    build:
+      context: ./jsport
+      dockerfile: ./Dockerfile
+    image: woodhouse-bot
+    restart: unless-stopped
+  woodhouse-web:
+    volumes: 
+      - ./web:/web
+      - ./common:/common
+    build:
+      context: .
+      dockerfile: ./web/Dockerfile
+    image: woodhouse-web
+    ports:
+      - 5000:5000
