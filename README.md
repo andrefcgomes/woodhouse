@@ -9,14 +9,14 @@ The friendliest of bots
 
 ## Release Notes
 
-v3.0.0 (January 2023)
+- v3.0.0 (January 2023)
  - Full lib update
  - Refactored to accomodate all the lib changes
  - Fresh start on github
-v2.0.0
+- v2.0.0
  - Port to JS
  - Quotes module NOT ported
-v1.0.0 (May 2019)
+- v1.0.0 (May 2019)
  - Python
  - Soundboard
  - Quotes modules
