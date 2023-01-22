@@ -1,20 +1,10 @@
-version: '2'
+version: "3"
 services:
-  woodhouse-bot:
-    volumes: 
-    - ./common:/common
-    build:
-      context: ./jsport
-      dockerfile: ./Dockerfile
-    image: woodhouse-bot
-    restart: unless-stopped
-  # woodhouse-web:
-  #   volumes: 
-  #     - ./web:/web
-  #     - ./common:/common
-  #   build:
-  #     context: .
-  #     dockerfile: ./web/Dockerfile
-  #   image: woodhouse-web
-  #   ports:
-  #     - 5000:5000
+  tests:
+    image: "node:16"
+    user: "node"
+    working_dir: /home/node/app
+    volumes:
+      - ./:/home/node/app
+    container_name: bot-woodhouse
+    command: bash -c "npm install && npm start"
