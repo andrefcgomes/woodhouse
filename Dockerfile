@@ -1,5 +1,6 @@
 FROM alpine
 RUN apk add --update nodejs npm
+RUN apk add --update ffmpeg
 RUN npm install pm2 -g
 # Create app directory
 WORKDIR /usr/src/app
@@ -16,5 +17,4 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-EXPOSE 9000
 CMD ["pm2-runtime", "index.js"]
